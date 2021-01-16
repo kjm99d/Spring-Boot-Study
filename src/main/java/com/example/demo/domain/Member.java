@@ -1,7 +1,14 @@
 package com.example.demo.domain;
 
+import javax.persistence.*;
+
+@Entity
 public class Member {
+
+    @Id // primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // what ?
     private Long id;
+
     private String name;
 
     public Long getId() {
